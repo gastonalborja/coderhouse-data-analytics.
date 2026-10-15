@@ -131,4 +131,18 @@ FROM productos AS p
 FULL OUTER JOIN ventas AS v ON p.producto_id = v.producto_id
 ORDER BY COALESCE(p.producto_id, v.producto_id), v.venta_id;
 
+-- Filtro adicional: solo los 3 casos sin coincidencia.
+SELECT COALESCE(p.producto_id, v.producto_id) AS producto_id_auditado,
+       p.nombre,
+       v.venta_id,
+       CASE
+           WHEN p.producto_id IS NULL THEN 'Venta sin producto'
+           ELSE 'Producto sin ventas'
+       END AS estado
+FROM productos AS p
+FULL OUTER JOIN ventas AS v ON p.producto_id = v.producto_id
+WHERE p.producto_id IS NULL OR v.venta_id IS NULL
+ORDER BY COALESCE(p.producto_id, v.producto_id), v.venta_id;
+GO
+
 
