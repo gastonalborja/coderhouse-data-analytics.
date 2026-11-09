@@ -4,7 +4,8 @@ RetailPro es mi proyecto académico del curso de Data Analytics. El proyecto re�
 
 ## Herramientas utilizadas
 
-- Azure SQL Edge en Docker como motor de base de datos.
+- Azure SQL Edge en Docker para la mayoría de los scripts del curso.
+- Microsoft SQL Server en Windows para el Proyecto Integrador Final (PIF).
 - T-SQL, el dialecto de SQL Server, para escribir las consultas.
 - Power BI Desktop para el análisis y la visualización, con Power Query para las transformaciones y DAX para las medidas.
 - GitHub para guardar y versionar los archivos.
@@ -21,10 +22,9 @@ El repositorio reúne ejercicios del curso y entregables de RetailPro.
 
 Antes de ejecutar un script, reviso qué base utiliza y si crea, modifica o solo consulta datos. Los scripts del curso pueden apuntar a bases diferentes.
 
-1. Iniciar el contenedor de Azure SQL Edge en Docker.
-2. Conectarse a la instancia con un cliente compatible con T-SQL.
-3. Revisar la instrucción `USE` y confirmar que la base y las tablas requeridas existan. Las consultas de las Pre-entregas 4 y 5 apuntan a `Ventas_Tech_DB`.
-4. Ejecutar el script correspondiente y validar los resultados.
+1. Para los scripts del curso que indican Azure SQL Edge, iniciar el contenedor en Docker. Para el PIF, conectarse a la instancia de Microsoft SQL Server en Windows.
+2. Revisar la instrucción `USE` y confirmar que la base y las tablas requeridas existan. Las consultas de las Pre-entregas 4 y 5 apuntan a `Ventas_Tech_DB`.
+3. Ejecutar el script correspondiente y validar los resultados.
 
 ## Power BI
 
